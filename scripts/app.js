@@ -1,17 +1,11 @@
-var apps=angular.module('apps',[])
+(function () {
+    var app = angular.module('app', []);
 
-
-apps.controller('saludarController'['$scope', function ($scope) {
-        $scope.userName='Jaime'
-        $scope.salud=function(){
-           $scope.greeting='Hello '+$scope.userName+'!';
+    app.controller("SaludoController", function () {
+        this.username = 'Jaime';
+        this.mensaje = '';
+        this.saludar = function () {
+            this.mensaje = 'Hello ' + this.username + '!';
         };
-    }]);
-
-apps.controller('MyController', ['$scope', function($scope) {
-        $scope.username = 'World';
-
-        $scope.sayHello = function() {
-           return $scope.greeting = 'Hello ' + $scope.username + '!';
-        };
-    }]);
+    });
+})();
