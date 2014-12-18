@@ -1,11 +1,17 @@
-var apps=angular.module('apps',[]);
+var apps=angular.module('apps',[])
 
-function AlumnosController($scope){
-    $scope.alumnos=[
-        {nombre:"Jaime",telefono:"3" ,curso:"9"},
-        {nombre:"Gaby",telefono:"1" ,curso:"9"},
-        {nombre:"Sergio",telefono:"4" ,curso:"9"},
-        {nombre:"Alexis",telefono:"2" ,curso:"9"}
-    ]
 
-}
+apps.controller('saludarController'['$scope', function ($scope) {
+        $scope.userName='Jaime'
+        $scope.salud=function(){
+           $scope.greeting='Hello '+$scope.userName+'!';
+        };
+    }]);
+
+apps.controller('MyController', ['$scope', function($scope) {
+        $scope.username = 'World';
+
+        $scope.sayHello = function() {
+           return $scope.greeting = 'Hello ' + $scope.username + '!';
+        };
+    }]);

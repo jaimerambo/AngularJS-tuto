@@ -32,3 +32,12 @@ h1{
     border-radius: 15px;
     padding: 10px;
 }
+.css-form input.ng-valid.ng-touched{
+    background-color: #78FA89;
+}
+
+
+
+.css-form input.ng-invalid.ng-touched{
+    background-color: #FA787E;
+}
