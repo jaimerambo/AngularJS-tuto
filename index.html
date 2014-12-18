@@ -6,10 +6,10 @@
     <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.1/css/bootstrap.css"/>
     <link rel="stylesheet" href="style/style.css"/>
 </head>
-<body class="wrapper" ng-controller="SaludoController as saludo">
+<body class="wrapper" >
 <h1>Lista</h1>
 
-<div>
+<div ng-controller="SaludoController as saludo">
     Escribe tu nombre:
     <input type="text" ng-model="saludo.username">
     <button ng-click='saludo.saludar()'>Saludar</button>
@@ -20,7 +20,22 @@
     <p ng-show="saludo.username">Hola {{saludo.username}}!</p>
 
 </div>
+<hr/>
+<div ng-controller="Otro">
+<form novalidate="true">
 
+   name: <input type="text" ng-model="name"/>
+   phone: <input type="tel" ng-model="telf" />
+
+</form>
+    <div>
+       name {{name}}
+        <br/>
+       phone {{telf}}
+
+    </div>
+
+</div>
 <script src="lib/angular-1.2.27/angular.js" type="text/javascript" ></script>
 <script src="scripts/app.js" type="text/javascript"></script>
 </body>

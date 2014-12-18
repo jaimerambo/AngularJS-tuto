@@ -8,4 +8,12 @@
             this.mensaje = 'Hello ' + this.username + '!';
         };
     });
+    
+    
+    app.controller("Otro",function ($scope) {
+        $scope.name='';
+        $scope.telf='';
+
+
+    })
 })();
